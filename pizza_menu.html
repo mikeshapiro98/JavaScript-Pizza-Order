@@ -7,6 +7,9 @@
     
     <title> It's Pizza Time! </title>
 
+
+    
+
     <!--Style Sheet-->
     <link rel="stylesheet" type="text/css" href="./css/pizza_style.css">
 
@@ -21,25 +24,33 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     
+    
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 
+    
+ 
+    
+    
 </head>
     
     
     
     <body>
         <br>
+        <br>
         <header>
-        
-        <h1>Mike's Pizza</h1>
-            
-            
-        
+            <span>
+            <h1>Mike's Pizza</h1>
+            </span>
         </header>
              
         <br>
         <br>
         <h2>Order</h2>
-        
+        <br>
+        <br>
         <br>
         <div id="form-container">
             <h3>Make you selections and press the order button. . .</h3>
@@ -113,12 +124,15 @@
                  
                    <div class="selections">
                     <h4>Pizza isn't pizza without toppings.</h4>
-                       <p>One meat topping and one veggie topping is on us. +$3 for each additional topping.</p>
+                       <p>One meat topping and one veggie topping is on us. +$1 for each additional topping.</p>
                      
                        
                            <div id="meat">
                                 <h4>Meat</h4>
-                                <input class="meat" type="checkbox" name="toppings" value="Pepperoni" >Pepperoni<br>
+                               
+
+                              
+                                <input class="meat" type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
                                 <input class="meat" type="checkbox" name="toppings" value="Sausage">Sausage<br>
                                 <input class="meat" type="checkbox" name="tpppings" value="Canadian Bacon">Canadian Bacon<br>
                                 <input class="meat" type="checkbox" name="toppings" value="Gound Beef">Ground Beef<br>
@@ -150,25 +164,39 @@
                  
                     
                  
-                 <button type="button" onclick="orderFunction()" value="Order!">Order!
-                 </button>
-             
+                 <a href="#here"><button class="btn js-btn" type="button" onclick="orderFunction()" value="Order!">Order!
+                 </button></a>
+                 <div id="here">
+          
+                </div> 
             <div id="finish1" class="totals" >
             
             </div>
-                 
+                  
              <div id="finish2" class="totals" >
             
             </div>
             
+               
+                 
+                 
             </form>  
         
            
         
         </div>
-    
-    
-    
-    
+    <br><br><br>
+  
+<script>
+$('.js-btn').click(() => {
+$('html, body').animate({
+scrollTop: $('#here').offset().top
+}, 500);
+});
+</script>    
+
+
+        
+        
     </body>
 </html>

@@ -56,9 +56,28 @@ header{
     text-align:center;
     background-color:#ff3a3a;
     border: 20px dotted #79c5ff;
-    
+      
 }
 
+/*
+header:hover {
+            
+  animation: spin 10s infinite linear;
+}
+
+header:hover span {
+  animation: spin 10s infinite reverse linear;
+}
+
+span {
+  display: inline-block;
+}
+
+*/
+
+@keyframes spin {
+  100% { transform: rotate(1turn); }
+}
 
 
 
@@ -169,13 +188,15 @@ button{
     box-shadow: 10px 10px 60px 1px;
     cursor: url(http://cur.cursors-4u.net/food/foo-2/foo165.cur), auto;
     background-color: rgb(191, 242, 226,0.9);
-    color: ;
+    border: 2px outset white;
         
 }
-button:active {
+button:hover {
   transform: translateY(4px);
   background-image: url(../img/button.png)
 }
+
+
 
 /*MEDIA BREAKS*/
 
@@ -221,6 +242,13 @@ button:active {
     height: 320px;
     float:none;            
 
+    }
+    
+    .totals {
+    
+    text-align: center;
+    
+    
     }
     
 }
