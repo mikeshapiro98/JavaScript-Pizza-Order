@@ -167,8 +167,3 @@ function getVeggie(total, ordered){
 }
 
 
-$('.js-btn').click(() => {
-    $('html, body').animate({
-        scrollTop: $('#here').offset().top
-    }, 1100);
-});
