@@ -35,7 +35,7 @@ function orderFunction() {
     //console.log("size ordered: "+ordered); 
     //console.log("subtotal: $"+total+".00");
   
-     ordered = ordered+"<h5>You Ordered: </h5>"+"A "+selectedSize+" Size Pizza "+"$"+sizeTotal+"<br>";
+     ordered = ordered+"<h5>You Ordered: </h5>"+"A "+selectedSize+" Size Pizza, "+"$"+sizeTotal+"<br>";
     
     getCrust(total,ordered);
     //console.log(total,ordered); /*All needed infor to pass along. */
@@ -70,7 +70,7 @@ function getCrust(total,ordered){
         crustTotal = 0;
     }
     
-    ordered = ordered + "With "+ selectedCrust + " Crust $"+crustTotal+"<br>";
+    ordered = ordered + "With "+ selectedCrust + " Crust, $"+crustTotal+"<br>";
     total = (total + crustTotal);
     
     getCheese(total, ordered);
@@ -96,7 +96,7 @@ function getCheese(total, ordered){
     }
     total = (total + cheeseTotal);
     
-    ordered = ordered + selectedCheese + " Cheese, and $"+cheeseTotal+"<br>";
+    ordered = ordered + selectedCheese + " Cheese, $"+cheeseTotal+"<br>";
     
     
     getSauce(total, ordered);
@@ -110,7 +110,7 @@ function getSauce(total, ordered) {
         if (sauceArray[s].checked){
             var selectedSauce = sauceArray[s].value;
             var sauceTotal= 0;
-            ordered = ordered + selectedSauce + " Sauce $0<h6>With:</h6>";
+            ordered = ordered + "and "+ selectedSauce + " Sauce $0.<h6>With:</h6>";
         }
     }
     
